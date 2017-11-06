@@ -1,0 +1,4 @@
+API_ID=00000
+API_HASH="YOUR_API_HASH"
+APP_TITLE="Your name"
+APP_SHORT_TITLE="Your short name"
