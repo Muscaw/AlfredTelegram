@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>ch.kevingrandjean.tg_link</string>
+	<key>connections</key>
+	<dict>
+		<key>6FACF048-EB58-4C04-868D-0A950C01CFDA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FC84A5F-9D8D-4182-A949-6B73732769CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Kevin Grandjean</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Telegram Link sender</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+#Put the path to your virtualenv or python interpreter. Must be python3
+~/venv/tbc/bin/python ./TelegramBasicCli/main.py send_message $query</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>3FC84A5F-9D8D-4182-A949-6B73732769CD</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tg</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving contacts</string>
+				<key>script</key>
+				<string>query="{query}"
+
+
+#Put the path to your virtualenv or python interpreter. Must be python3
+~/venv/tbc/bin/python ./TelegramBasicCli/main.py get_contacts "$query"</string>
+				<key>title</key>
+				<string>Send message</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6FACF048-EB58-4C04-868D-0A950C01CFDA</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>3FC84A5F-9D8D-4182-A949-6B73732769CD</key>
+		<dict>
+			<key>ypos</key>
+			<real>30</real>
+		</dict>
+		<key>6FACF048-EB58-4C04-868D-0A950C01CFDA</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>kevingrandjean.ch</string>
+</dict>
+</plist>
